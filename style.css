@@ -1,0 +1,530 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+@font-face {
+  font-family: face;
+  src: url(./Assets/fonts/Poppins-ExtraLight.ttf);
+}
+@font-face {
+  font-family: paragraph;
+  src: url(./Assets/fonts/Ubuntu-Light.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hidden {
+  opacity: 0;
+  transition: .70s linear;
+  transition-delay: calc(.3s * var(--i));
+  transform: translateY(80px);
+}
+
+.hidden.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+a{
+    font-family: face;
+    font-size: larger;
+}
+i{
+    color: #000;
+}
+h1{
+    font-family: face;
+}
+h2{
+    font-family: face;
+}
+h3{
+    font-family: face;
+}
+p{
+    font-family: paragraph;
+    font-size: large;
+    color: rgb(181, 181, 181);
+}
+button{
+    background-color: rgb(119, 183, 252);
+    border: none;
+    padding: 10px;
+    font-family: face;
+    font-size: large;
+    font-weight: 600;
+    margin-top: 20px;
+    color: rgb(0, 0, 0);
+    transition: all 1s ease;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(1, 94, 134);
+    color: white;
+    transform: translateY(10px);
+}
+.container{
+    background-color: rgb(12, 12, 12);
+}
+.title{
+    border-left: 5px dotted rgb(30, 167, 226);
+    padding: 10px;
+}
+/***header styling***/
+header{
+    width: 75%;
+    margin: auto;
+    padding-top: 10px;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+label {
+    display: none;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul .logo{
+    list-style-type: none;
+}
+nav ul .logo a{
+    text-decoration: none;
+    color: rgb(119, 183, 252);
+    font-size: 25px;
+    font-family: face;
+}
+
+nav ul .nav-links li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+}
+nav ul .nav-links li a{
+    color: white;
+    text-decoration: none;
+    transition: all 1s;
+    font-size: 20px;
+}
+nav ul .nav-links li a:hover{
+    color: rgb(30, 167, 226);
+}
+nav ul .nav-links li a:focus{
+    color: rgb(30, 167, 226);
+}
+
+/***landing page***/
+section{
+    width: 75%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.landpage{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+    padding-top: 60px;
+}
+
+/***landing page picture***/
+.landpage .my-picture{
+    width: 35%;
+}
+.landpage .my-picture img{
+    width: 90%;
+    height: 100%;
+}
+
+/**landing page text***/
+.landpage .text{
+    width: 65%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.landpage .text h2{
+    font-size: 30px;
+    color: rgb(119, 183, 252);
+}
+.landpage .text h1{
+    font-size: 4rem;
+}
+.landpage .text h3{
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.landpage .text button{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/****page wrap***/
+.wrap{
+    width: 100%;
+    margin-top: 0;
+}
+
+#About .content-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.content-wrap .grey-bg{
+    background-color: rgb(26, 26, 26);
+    width: 50%;
+    position: absolute;
+    height: 100%;
+}
+
+/***about-me content***/
+.content-wrap .about-me{
+    width: 75%;
+    z-index: 2;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/****offers**/
+.offers-wrap{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+
+/****row that contains the boxes***/
+.offers-wrap .column{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/***boxes**/
+.offers-wrap .column .col{
+    background-color: rgb(42, 40, 40);
+    width: 30%;
+    padding: 12px;
+    padding-bottom: 30px;
+    margin-top: 40px;
+}
+
+.offers-wrap .column .middle{
+    background-image: linear-gradient(rgb(30, 167, 226), rgb(1, 94, 134));
+}
+
+/***icons**/
+.offers-wrap .column .col .icon{
+    width: 50px;
+    height: 50px;
+    margin-top: 25px;
+}
+.offers-wrap .column .icon img{
+    width: 100%;
+    height: 100%;
+}
+
+.offers-wrap .column .col .name{
+    font-weight: 500;
+    font-size: large;
+    margin-top: 10px;
+}
+
+.offers-wrap .column .col .text{
+    padding-top: 10px;
+}
+
+/***colon for years of experience***/
+.offers-wrap .column .yrs{
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.offers-wrap .column .yrs h1{
+    font-size: 50px;
+    color: rgb(30, 167, 226);
+}
+.offers-wrap .column .yrs p{
+    font-size: 30px;
+}
+
+/***colon for skills and expertise***/
+.offers-wrap .column .skills{
+    width: 65%;
+    padding: 10px;
+}
+
+/****my skills percentage***/
+.expertise{
+    width: 80%;
+    margin: 10px auto;
+    padding: 3px;
+}
+
+/***skill type****/
+.expertise h2{
+    font-weight: 300;
+    font-size: large;
+}
+
+/***percentage ratio bar***/
+hr{
+    background-color: rgb(30, 167, 226);
+    animation: drive 5s ease;
+    height: 3px;
+    width: 30%;
+    border: none;
+    border-radius: 50px;
+}
+@keyframes drive {
+    from{width: 0;}
+    to{width: 30%;}
+}
+
+.hr1{
+    width: 90%;
+    animation: drive2 5s ease;
+}
+@keyframes drive2 {
+    from{width: 0;}
+    to{width: 90%;}
+}
+
+.hr2{
+    width: 70%;
+    animation: drive3 5s ease;
+}
+@keyframes drive3 {
+    from{width: 0;}
+    to{width: 70%;}
+}
+
+.hr3{
+    width: 10%;
+    animation: drive4 5s ease;
+}
+@keyframes drive4 {
+    from{width: 0;}
+    to{width: 10%;}
+}
+
+
+/***project page***/
+.forpro{
+    justify-content: center;
+    display: flex;
+}
+.project-wrap{
+    padding-top: 40px;
+    width: 75%;
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+}
+.heading .button{
+    width: 30%;
+}
+.heading button{
+    margin: 10px;
+    float: right;
+    width: 85%;
+}
+
+
+/***main projects on columns***/
+.projects{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: 25px auto;
+}
+.projects .row{
+  width: 45%;
+}
+
+.projects .row .col{
+    margin-top: 20px;
+}
+.projects .row .col h2{
+    font-size: larger;
+    margin-top: 7px;
+}
+.projects .row .col p{
+    color: rgb(30, 167, 226);
+}
+
+/**the project image wrap***/
+.projects .img-wrap{
+    height: 32vh;
+    background-color: rgba(42, 40, 40, 0.798);
+    overflow-y: hidden;
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.projects .img-wrap img{
+    width: 85%;
+    height: 80%;
+}
+
+/****slide up container***/
+.projects .img-wrap .after{
+    position: absolute;
+    width: 100%;
+    transform: translateY(100%);
+    transition: all 1s ease;
+}
+
+/****project view button***/
+.projects .img-wrap .after button{
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.projects .img-wrap:hover .after{
+    transform: translateY(0);
+}
+.projects .img-wrap .after button:hover i{
+    color: white;
+    transition: 1s ease;
+}
+
+
+/***contact page***/
+.contact-bg{
+    margin-top: -10%;
+    padding-bottom: 150px;
+}
+
+/**full width grey bg***/
+.contact-bg .grey-bg2{
+    background-color: rgb(26, 26, 26);
+    width: 100%;
+    padding-top: 10%;
+}
+
+/****contact box***/
+.contact-bg .contact{
+    width: 75%;
+    margin: auto;
+    background-image: linear-gradient(rgb(30, 167, 226), rgb(1, 94, 134));
+    padding: 20px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    position: relative;
+    top: 100px;
+}
+
+/***contact title***/
+.contact .title{
+    border-left: 5px dotted rgb(12, 12, 12);
+}
+.contact .title h2{
+    color: rgb(12, 12, 12);
+}
+.contact p{
+    color: white;
+}
+
+/****contact-button****/
+.contact .button{
+    display: flex;
+    align-items: center;
+}
+.contact button{
+    background-color: white;
+    margin-top: 0;
+    float: right;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.contact button:hover{
+    color: rgb(0, 0, 0);
+}
+
+.contact-wrap{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.contact .text p{
+    margin-top: 10px;
+}
+
+/***now moving to my footer nav***/
+.footer-nav{
+    margin-top: 20px;
+    text-align: center;
+}
+.footer-nav li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 15px;
+}
+.footer-nav li a{
+    text-decoration: none;
+    transition: all 1s ease;
+}
+.footer-nav li a:hover{
+    color: rgb(30, 167, 226);
+}
+
+/****footer**/
+footer{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: rgba(42, 40, 40, 0.798);
+   margin-top: 20px;
+   padding: 10px;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+footer li{
+    list-style-type: none;
+}
+footer li a{
+    text-decoration: none;
+    color: rgb(30, 167, 226);
+    font-family: face;
+    font-size: 25px;
+}
+
+footer .social-icon li{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+footer .social-icon li i{
+    color: #4e4c4c;
+    font-size: 35px;
+}
+footer .social-icon li i:hover{
+    color: #ffffff;
+    transition: .40s ease;
+}
+
+/****END OF PROJECT (NDUOYO PORTFOLIIO WEBSITE)*****/

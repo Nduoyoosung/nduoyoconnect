@@ -1,0 +1,353 @@
+@media screen and (max-width: 920px) {
+
+    /***header***/
+    header{
+        width: 100%;
+        position: sticky;
+        top: 0;
+        padding-bottom: 20px;
+        background-color: rgb(12, 12, 12);
+        z-index: 10;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.404);
+        padding-top: 0;
+    }
+    .logo{
+        margin-top: 20px;
+    }
+    label{
+        display: block;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    label i{
+        color: rgb(119, 183, 252);
+        font-size: 35px;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    nav ul .open{
+        position: absolute;
+        right: 5%;
+        bottom: 30%;
+    }
+    .menu .close{
+        margin: 20px;
+    }
+
+    /***hamburger menu***/
+    .menu{
+        background-color: rgb(26, 26, 26);
+        height: 100vh;
+        min-width: 100%;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 100;
+        transform: translateX(100%);
+        transition: 0.60s ease-in;
+    }
+    /***nav links wrap***/
+    .nav-links{
+        margin-top: 40px;
+    }
+    nav ul .nav-links li{
+        display: block;
+        margin-top: 10px;
+        border-bottom: 1px solid white;
+        padding-left: 20px;
+    }
+
+    input:checked ~ .menu{
+        transform: translateY(0);
+    }
+    input:checked ~ .menu li{
+        opacity: 0;
+        animation: popup .40s ease-in forwards;
+        animation-delay: 0s;
+    }
+    input:checked ~ .menu li:nth-child(1){
+        animation-delay: 0s;
+    }
+    input:checked ~ .menu li:nth-child(2){
+        animation-delay: 0.50s;
+    }
+    input:checked ~ .menu li:nth-child(3){
+        animation-delay: 1s;
+    }
+    input:checked ~ .menu li:nth-child(4){
+        animation-delay: 1.50s;
+    }
+    @keyframes popup {
+        from{
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to{
+            opacity: 1;
+        }
+    }
+
+
+    /****landing page****/
+    .landpage{
+        padding-top: 20px;
+        padding-bottom: 70px;
+        width: 90%;
+    }
+
+    /***landing page picture***/
+    .landpage .my-picture{
+        display: flex;
+        align-items: center;
+    }
+    .landpage .my-picture img{
+        width: 90%;
+        height: 70%;
+    }
+
+    /***landing page text****/
+    .landpage .text h2{
+        font-size: 25px;
+    }
+    .landpage .text h1{
+        font-size: 3rem;
+    }
+    .landpage .text h3{
+        font-size: 18px;
+    }
+    
+    
+/***about-me content***/
+.content-wrap .about-me{
+    width: 90%;
+}
+/****offers**/
+.offers-wrap{
+    width: 70%;
+}
+/***boxes**/
+.offers-wrap .column .col{
+    width: 45%;
+}
+/***colon for skills and expertise***/
+.offers-wrap .column .skills{
+    width: 100%;
+}
+
+/***project page***/
+.project-wrap{
+    width: 90%;
+}
+/***projects row***/
+.projects .row{
+  width: 47%;
+}
+
+
+/***contact page***/
+.contact-bg{
+    margin-top: -20%;
+}
+
+/**full width grey bg***/
+.contact-bg .grey-bg2{
+    background-color: rgb(26, 26, 26);
+    width: 100%;
+    padding-top: 20%;
+}
+
+.contact-wrap{
+    flex-direction: column;
+}
+/****contact-button****/
+.contact .button{
+    margin-top: 10px;
+}
+
+/***footer-nav****/
+.footer-nav li{
+    display: none;
+ }
+
+footer .logo{
+    margin: 0;
+}
+}
+
+
+
+
+/***** MOBILE-VIEW (for phone)**/
+@media screen and (max-width: 500px) {
+    /***landing page picture***/
+    .landpage .my-picture img{
+        width: 90%;
+        height: 85%;
+    }
+
+    /***landing page text****/
+    .landpage .text h2{
+        font-size: 20px;
+    }
+    .landpage .text h1{
+        font-size: 2rem;
+    }
+    .landpage .text h3{
+        margin-bottom: 5px;
+    }
+    .landpage .text p{
+        display: none;
+    }
+
+/****offers**/
+.offers-wrap{
+    width: 90%;
+}
+
+/***project page***/
+.projects{
+    width: 90% !important;
+}
+/**the project image wrap***/
+.projects .img-wrap{
+    height: 30vh;
+}
+
+/***contact page***/
+.contact-bg{
+    margin-top: -30%;
+}
+
+/**full width grey bg***/
+.contact-bg .grey-bg2{
+    padding-top: 30%;
+}
+
+/****contact box***/
+.contact-bg .contact{
+    width: 85%;
+}
+
+/****footer***/
+footer{
+    flex-direction: column;
+}
+footer .logo{
+    margin: 15px;
+}
+footer .email{
+    margin: 10px;
+}
+}
+
+
+@media screen and (max-width: 421px){
+/***project page***/
+.heading{
+    flex-direction: column;
+}
+.heading .button{
+    width: 100%;
+}
+.heading button{
+    float: left;
+    width: unset;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+    label{
+        width: 30px;
+        height: 30px;
+    }
+
+    .title h2{
+        font-size: 20px;
+    }
+
+  .landpage{
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+
+  /***landing page text****/
+  .landpage .text{
+    width: 100%;
+  }
+  .landpage .text p{
+    display: block;
+  }
+
+  .landpage .my-picture{
+    width: 60%;
+    margin-top: 50px;
+  }
+  .landpage .my-picture img{
+    width: 100%;
+  }
+
+    nav ul .logo{
+        margin-left: -35%;
+    }
+    /***landing page text****/
+    .landpage .text h2{
+        font-size: 30px;
+    }
+    .landpage .text h1{
+        font-size: 2.5rem;
+    }
+
+/***boxes**/
+.offers-wrap .column .col{
+    width: 100%;
+}
+
+
+/***projects row***/
+.projects .row{
+    width: 100%;
+  }
+  
+  .projects .row .col{
+    margin-top: 40px;
+  }
+
+/***contact page***/
+.contact-bg{
+    margin-top: -30%;
+}
+
+/**full width grey bg***/
+.contact-bg .grey-bg2{
+    padding-top: 30%;
+}
+
+/****contact box***/
+.contact-bg .contact{
+    width: 85%;
+}
+
+}
+
+
+
+@media screen and (max-width: 323px) {
+    /***landing page text****/
+    .landpage .text h1{
+        font-size: 2rem;
+    }
+    /***skill type****/
+    .expertise h2{
+        font-weight: bold;
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 318px) {
+nav ul .logo a{
+    font-size: 20px;
+}
+}
